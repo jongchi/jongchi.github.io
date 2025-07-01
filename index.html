@@ -1,1 +1,93 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>kyeols-day</title><script defer="defer" src="/js/chunk-vendors.1d0919b7.js"></script><script defer="defer" src="/js/app.89903882.js"></script><link href="/css/chunk-vendors.66fe738e.css" rel="stylesheet"><link href="/css/app.928963e1.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but kyeols-day doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .swiper {
+            height: 945px;
+            width: 800px;
+        }
+        .swiper-slide {
+            background-color: white;
+            width: 800px;
+            display: flex;
+            justify-content: center;
+        }
+        .swiper-img {
+            width: 100%;
+            max-width: 580px;
+        }
+    </style>
+
+
+
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            simulateTouch: true,
+
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    </script>
+</head>
+<body>
+<div class="d-flex justify-content-center">
+    <div class="swiper">
+        <div class="swiper-wrapper" style="width: 800px">
+            <div class="swiper-slide">
+                <img class="swiper-img" src="img1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-img" src="img2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-img" src="img3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-img" src="img4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-img" src="img5.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
