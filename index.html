@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>inno.N Symposium</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -29,6 +29,18 @@
         .swiper-img {
             width: 100%;
             max-width: 580px;
+        }
+
+        #intro {
+            opacity: 0.7;
+            position: fixed;
+            z-index: 1000;
+            width: 800px;
+        }
+
+        .hide {
+            opacity: 0 !important;
+            transition: opacity 1s;
         }
     </style>
 
@@ -67,6 +79,9 @@
 <body>
 <div class="d-flex justify-content-center">
     <div class="swiper">
+            <div id="intro">
+                <img src="intro.png" alt="">
+            </div>
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img class="swiper-img" src="img1.jpg" alt="">
@@ -92,6 +107,18 @@
 
 
 </div>
+    <script>
+        window.addEventListener('load', function (){
+            setTimeout(function (){
+                const intro = document.getElementById('intro')
+                intro.classList.add('hide')
+
+                setTimeout(function() {
+                     intro.style.display = 'none'
+                }, 2000)
+            }, 1000)
+        })
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
