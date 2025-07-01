@@ -12,15 +12,20 @@
             margin: 0;
             padding: 0;
         }
+
+        .swiper-wrapper {
+            width: 100vw;
+            max-width: 800px;
+        }
         .swiper {
-            height: 945px;
-            width: 800px;
+            width: 100%;
+            max-width: 800px;
         }
         .swiper-slide {
             background-color: white;
-            width: 800px;
             display: flex;
             justify-content: center;
+            height: auto;
         }
         .swiper-img {
             width: 100%;
@@ -62,7 +67,7 @@
 <body>
 <div class="d-flex justify-content-center">
     <div class="swiper">
-        <div class="swiper-wrapper" style="width: 800px">
+        <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img class="swiper-img" src="img1.jpg" alt="">
             </div>
